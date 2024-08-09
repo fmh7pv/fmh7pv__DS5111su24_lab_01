@@ -1,5 +1,3 @@
-.DEFAULT_GOAL := default
-
 default:
 	cat Makefile
 
@@ -26,15 +24,6 @@ total_lines:
 total_words:
 	cat pg*.txt | wc -w
 
-setup:
+setup_env:
 	python3 -m venv env
 	. env/bin/activate; pip install --upgrade pip; pip install -r requirements.txt
-
-lint:
-	. env/bin/activate; pylint src/fmh7pv/tokenizer.py
-
-test:
-	. env/bin/activate; pytest -m "not integration"
-
-test_integration:
-	. env/bin/activate; pytest -m integration
