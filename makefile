@@ -1,6 +1,3 @@
-default:
-	cat Makefile
-
 get_texts:
 	bash get_the_books.sh
 
@@ -28,3 +25,4 @@ setup_env:
 	python3 -m venv env
 	. env/bin/activate; pip install --upgrade pip; pip install -r requirements.txt
 
+env: setup_env
