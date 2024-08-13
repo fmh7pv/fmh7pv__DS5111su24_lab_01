@@ -26,3 +26,12 @@ setup_env:
 	. env/bin/activate; pip install --upgrade pip; pip install -r requirements.txt
 
 env: setup_env
+
+lint:
+	. env/bin/activate; pylint src/adk8cy/tokenizer.py
+
+test:
+	. env/bin/activate; pytest -m "not integration"
+
+test_integration:
+	. env/bin/activate; pytest -m integration
