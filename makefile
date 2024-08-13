@@ -28,7 +28,7 @@ setup_env:
 env: setup_env
 
 lint:
-	. env/bin/activate; pylint src/adk8cy/tokenizer.py
+	. env/bin/activate; pylint src/fmh7pv/tokenizer.py
 
 test:
 	. env/bin/activate; pytest -m "not integration"
